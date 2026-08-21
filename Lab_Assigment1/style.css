@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: white;
+}
+
+/* Header */
+header {
+    height: 88px;
+    background: #09264d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+
+.logo h1 {
+    font-size: 29px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 45px;
+    height: 100%;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav a.active,
+nav a:hover {
+    color: #ffd400;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffd400;
+}
+
+/* Hero */
+.hero {
+    min-height: 325px;
+    background: #eef6ff;
+    border-bottom: 1px solid #cfd6de;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 18%;
+}
+
+.hero-text {
+    max-width: 590px;
+}
+
+.hero-text h2 {
+    color: #09264d;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.hero-text h3 {
+    color: #1257b5;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #09264d;
+    color: white;
+    text-decoration: none;
+    padding: 11px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1257b5;
+}
+
+.profile {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    padding: 7px;
+    background: white;
+    border: 2px solid #d9d9d9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* -------------------------------------
+   Cleaned Layout Grid 
+   (Overlap Issue Fixed)
+-------------------------------------- */
+.content {
+    max-width: 1160px;
+    margin: auto;
+    padding: 40px 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+#about {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#projects {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+#skills {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#education {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#contact {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* ------------------------------------- */
+
+.info-box h2,
+.education-box h2,
+.projects-box h2,
+.contact-box h2 {
+    color: #09264d;
+    font-size: 22px;
+    margin-bottom: 13px;
+}
+
+.info-box h2 span,
+.education-box h2 span,
+.projects-box h2 span,
+.contact-box h2 span {
+    color: #1260c3;
+    margin-right: 12px;
+}
+
+.info-box p {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 440px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* Education Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #c9cdd2;
+    padding: 9px 12px;
+    text-align: left;
+}
+
+th {
+    background: #f7f7f7;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.project-card {
+    min-height: 126px;
+    border: 1px solid #d0d5db;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.project-card h3 {
+    font-size: 16px;
+    color: #09264d;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+}
+
+.project-card a {
+    color: #0069d9;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Contact */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 4px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #cdd2d8;
+    border-radius: 3px;
+    padding: 8px 11px;
+    font-family: inherit;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 9px 20px;
+    background: #09264d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1257b5;
+}
+
+button.reset {
+    background: #e5e5e5;
+    color: #222;
+}
+
+/* Social */
+.connect {
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.social-links a:first-child {
+    background: #0879bd;
+    color: white;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 2px;
+    font-size: 23px;
+}
+
+.social-links a:nth-child(2) {
+    color: #111;
+}
+
+.social-links a:nth-child(3) {
+    color: #d93025;
+}
+
+/* Footer */
+footer {
+    height: 55px;
+    background: #09264d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    header {
+        padding: 15px 4%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        height: 35px;
+    }
+
+    nav a.active::after {
+        bottom: 0;
+    }
+
+    .hero {
+        padding: 35px 7%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    #about, #projects, #skills, #education, #contact {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .profile {
+        width: 210px;
+        height: 210px;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-text h3 {
+        font-size: 23px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
