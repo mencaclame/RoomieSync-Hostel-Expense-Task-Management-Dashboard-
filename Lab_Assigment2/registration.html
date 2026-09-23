@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="#" method="POST">
+        
+        <!-- Text Input -->
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <!-- Email Input -->
+        <label for="emailAdd">Email Address:</label><br>
+        <input type="email" id="emailAdd" name="emailAdd" required><br><br>
+
+        <!-- Password Input -->
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass" required><br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <!-- Dropdown -->
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course">
+            <option value="btech">B.Tech</option>
+            <option value="bca">BCA</option>
+            <option value="bsc">B.Sc</option>
+        </select><br><br>
+
+        <!-- Checkboxes -->
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+        <label for="gaming">Gaming / PC Build</label><br>
+        <input type="checkbox" id="math" name="hobbies" value="math">
+        <label for="math">Solving Math Problems</label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Registration</button>
+        
+    </form>
+</body>
+</html>
