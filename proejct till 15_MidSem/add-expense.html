@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense - RoomieSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">RoomieSync</div>
+        <div class="nav-buttons">
+            <!-- Wapas dashboard jane ka button -->
+            <button class="btn-login" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+        </div>
+    </nav>
+
+    <!-- Form Container -->
+    <div class="container form-container">
+        <div class="card">
+            <h2>Add New Expense</h2>
+            
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label>Description (e.g., Wifi Bill)</label>
+                    <input type="text" placeholder="What was this for?" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Amount (₹)</label>
+                    <input type="number" placeholder="Enter amount" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Paid By</label>
+                    <select>
+                        <option>You (Deepanshu)</option>
+                        <option>Pramit</option>
+                        <option>Kanishk</option>
+                        <option>Tanmay</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select>
+                        <option>Groceries</option>
+                        <option>Rent</option>
+                        <option>Utilities (Electricity/Wifi)</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How to split?</label>
+                    <select>
+                        <option>Equally among everyone</option>
+                        <option>By exact amount</option>
+                        <option>By percentage</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">Save Expense</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

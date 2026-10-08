@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RoomieSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">RoomieSync</div>
+        <div class="nav-buttons">
+            <button class="btn-login" onclick="window.location.href='index.html'">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="container">
+        
+        <!-- Header & Buttons -->
+        <header class="dashboard-header">
+            <h2>Welcome to Hostel Room Dashboard</h2>
+            <div class="action-buttons">
+               <button class="btn-primary" onclick="window.location.href='add-expense.html'">+ Add Expense</button>
+                <button class="btn-primary">+ Add Task</button>
+            </div>
+        </header>
+
+        <!-- 3 Cards Layout -->
+        <div class="dashboard-grid">
+            
+            <!-- Balances Card -->
+            <div class="card">
+                <h3>Balance Summary</h3>
+                <ul class="list">
+                    <li>You owe Tanmay: ₹500</li>
+                    <li>Pramit owes you: ₹200</li>
+                    <li>Kanishk owes you: ₹300</li>
+                </ul>
+            </div>
+
+            <!-- Expenses Card -->
+            <div class="card">
+                <h3>Recent Expenses</h3>
+                <ul class="list">
+                    <li>Groceries - ₹1200 (Paid by You)</li>
+                    <li>Electricity - ₹800 (Paid by Shantanu)</li>
+                </ul>
+            </div>
+
+            <!-- Tasks Card -->
+            <div class="card">
+                <h3>Upcoming Tasks</h3>
+                <ul class="list">
+                    <li>Clean Room - Pending</li>
+                    <li>Pay Wi-Fi Bill - In Progress</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
